@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../app/modules/modules.dart';
+
+import '../../app/routes/routes.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -11,6 +15,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
+      home: LoginPage(),
+      debugShowCheckedModeBanner: false,
+      getPages: AppPages.pages,
     );
   }
 }
