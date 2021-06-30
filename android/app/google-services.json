@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1094199574333",
+    "project_id": "desafio-music-playce",
+    "storage_bucket": "desafio-music-playce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094199574333:android:3a812b468c6ab12abd8f54",
+        "android_client_info": {
+          "package_name": "com.example.desafio_musicplayce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094199574333-d2836jccpts68hur3pmjgfsolvlt2j8g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm1OIudusWZt52b2X3pHAH_0YblsV_Bpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094199574333-d2836jccpts68hur3pmjgfsolvlt2j8g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
