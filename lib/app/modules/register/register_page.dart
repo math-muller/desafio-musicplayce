@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-class RegisterPage extends StatelessWidget {
+import '../../shared/shared.dart';
+
+class RegisterPage extends StatelessWidget with KeyboardManager {
   const RegisterPage({Key? key}) : super(key: key);
 
   @override
