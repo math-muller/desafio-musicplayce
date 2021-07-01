@@ -1,7 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class RemoteAddAccount {
   FirebaseAuth _auth = FirebaseAuth.instance;
+  final _firestore = FirebaseFirestore.instance.collection('users');
 
   Future<void> add({required String email, required String password}) async {
     try {
@@ -16,5 +18,12 @@ class RemoteAddAccount {
         throw Exception('A conta já existe para esse e-mail.');
       }
     }
+  }
+
+  Future<void> addIntoFirestoreDatabase({
+    required String nome,
+    required String email,
+  }) async {
+    _firestore.doc(_auth.currentUser!.uid).set({'nome': nome, 'email': email});
   }
 }

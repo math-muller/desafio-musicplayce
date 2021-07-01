@@ -57,6 +57,4 @@ class RegisterController extends GetxController {
   Future<void> addAccount() async {
     try {} catch (error) {}
   }
-
-  Future<void> addAccountIntoFirestoreDatabase() async {}
 }
