@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 
-import '../modules/modules.dart';
+import '../modules/home/home.dart';
+import '../modules/login/login.dart';
+import '../modules/register/register.dart';
 
 import '../routes/routes.dart';
 

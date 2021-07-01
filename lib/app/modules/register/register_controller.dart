@@ -76,4 +76,8 @@ class RegisterController extends GetxController {
       );
     }
   }
+
+  void goBack() {
+    Get.back();
+  }
 }

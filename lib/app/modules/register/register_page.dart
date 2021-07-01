@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 import '../../shared/shared.dart';
 import '../../utils/utils.dart';
 
-import '../modules.dart';
-
 import 'components/components.dart';
+
+import 'register.dart';
 
 class RegisterPage extends StatelessWidget with KeyboardManager {
   const RegisterPage({Key? key}) : super(key: key);
@@ -78,7 +78,7 @@ class RegisterPage extends StatelessWidget with KeyboardManager {
                         color: Colors.black26,
                         padding: EdgeInsets.all(10),
                         borderRadius: BorderRadius.circular(30),
-                        onPressed: () {},
+                        onPressed: _.goBack,
                         child: Icon(Icons.arrow_back),
                       ),
                     ),

@@ -4,8 +4,7 @@ import 'package:get/get.dart';
 import '../../../shared/shared.dart';
 
 import '../../../utils/utils.dart';
-
-import '../../modules.dart';
+import '../register.dart';
 
 class RegisterForm extends StatelessWidget {
   const RegisterForm({Key? key}) : super(key: key);
