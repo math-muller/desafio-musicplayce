@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../data/repositories/repositories.dart';
+
+import '../../shared/shared.dart';
+
 class RegisterController extends GetxController {
+  final _repository = Get.find<AddAccountRepository>();
+
   GlobalKey<FormState> _formKey = GlobalKey();
   GlobalKey<FormState> get formKey => _formKey;
 
@@ -55,6 +61,19 @@ class RegisterController extends GetxController {
   }
 
   Future<void> addAccount() async {
-    try {} catch (error) {}
+    SpinnerDialog spinnerDialog = SpinnerDialog(Get.overlayContext!);
+    try {
+      spinnerDialog.showLoading();
+      await _repository.add(email: _email, password: _password);
+      await _repository.addIntoFirestoreDatabase(nome: _name, email: _email);
+      spinnerDialog.hideLoading();
+      spinnerDialog.showDialogWithSuccess();
+    } catch (error) {
+      spinnerDialog.hideLoading();
+      showMessage(
+        context: Get.overlayContext!,
+        message: '$error'.substring(10),
+      );
+    }
   }
 }

@@ -10,6 +10,12 @@ ThemeData makeAppTheme() {
     enabledBorder: OutlineInputBorder(
       borderSide: BorderSide(color: Colors.black38),
     ),
+    errorBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.red),
+    ),
+    focusedErrorBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.red),
+    ),
   );
 
   final elevatedButtonTheme = ElevatedButtonThemeData(
@@ -21,8 +27,15 @@ ThemeData makeAppTheme() {
     ),
   );
 
+  final textButtonTheme = TextButtonThemeData(
+    style: ButtonStyle(
+      overlayColor: MaterialStateProperty.all(Colors.black12),
+    ),
+  );
+
   return ThemeData(
     inputDecorationTheme: inputDecorationTheme,
     elevatedButtonTheme: elevatedButtonTheme,
+    textButtonTheme: textButtonTheme,
   );
 }

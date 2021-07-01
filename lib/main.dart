@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             theme: makeAppTheme(),
             home: RegisterPage(),
+            initialBinding: RegisterBinding(),
             debugShowCheckedModeBanner: false,
             getPages: AppPages.pages,
           );

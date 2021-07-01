@@ -16,6 +16,7 @@ class RemoteAddAccount {
         throw Exception('A senha fornecida é muito fraca.');
       } else if (error.code == 'email-already-in-use') {
         throw Exception('A conta já existe para esse e-mail.');
+        
       }
     }
   }

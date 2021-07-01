@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../shared/shared.dart';
-
 import '../../utils/utils.dart';
+
+import '../modules.dart';
 
 import 'components/components.dart';
 
@@ -18,69 +20,71 @@ class RegisterPage extends StatelessWidget with KeyboardManager {
     final double sizeBlackCircle = responsive.wp(80);
 
     return Scaffold(
-      body: GestureDetector(
-        onTap: () => hideKeyboard(context),
-        child: SingleChildScrollView(
-          child: Container(
-            width: double.infinity,
-            height: responsive.height,
-            child: Stack(
-              children: [
-                Positioned(
-                  top: -sizeBlackCircle * 0.4,
-                  right: -sizeBlackCircle * 0.2,
-                  child: Circle(
-                    size: sizeBlackCircle,
-                    colors: [Colors.black54, Colors.black],
-                  ),
-                ),
-                Positioned(
-                  top: -sizeRedCircle * 0.55,
-                  left: -sizeRedCircle * 0.15,
-                  child: Circle(
-                    size: sizeRedCircle,
-                    colors: [Colors.red.shade100, Colors.red.shade900],
-                  ),
-                ),
-                Positioned(
-                  top: sizeRedCircle * 0.60,
-                  left: sizeRedCircle * 0.12,
-                  child: Column(
-                    children: <Widget>[
-                      Icon(Icons.login_rounded, size: 45),
-                      SizedBox(
-                        height: responsive.dp(3),
-                      ),
-                      Text(
-                        "Inscreva-se para começar",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: responsive.dp(2),
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Positioned(
-                  top: sizeRedCircle * 1.2,
-                  left: sizeRedCircle * 0.1,
-                  child: RegisterForm(),
-                ),
-                Positioned(
-                  left: 15,
-                  top: 10,
-                  child: SafeArea(
-                    child: CupertinoButton(
-                      color: Colors.black26,
-                      padding: EdgeInsets.all(10),
-                      borderRadius: BorderRadius.circular(30),
-                      onPressed: () {},
-                      child: Icon(Icons.arrow_back),
+      body: GetBuilder<RegisterController>(
+        builder: (_) => GestureDetector(
+          onTap: () => hideKeyboard(context),
+          child: SingleChildScrollView(
+            child: Container(
+              width: double.infinity,
+              height: responsive.height,
+              child: Stack(
+                children: [
+                  Positioned(
+                    top: -sizeBlackCircle * 0.4,
+                    right: -sizeBlackCircle * 0.2,
+                    child: Circle(
+                      size: sizeBlackCircle,
+                      colors: [Colors.black54, Colors.black],
                     ),
                   ),
-                ),
-              ],
+                  Positioned(
+                    top: -sizeRedCircle * 0.55,
+                    left: -sizeRedCircle * 0.15,
+                    child: Circle(
+                      size: sizeRedCircle,
+                      colors: [Colors.red.shade100, Colors.red.shade900],
+                    ),
+                  ),
+                  Positioned(
+                    top: sizeRedCircle * 0.60,
+                    left: sizeRedCircle * 0.12,
+                    child: Column(
+                      children: <Widget>[
+                        Icon(Icons.login_rounded, size: 45),
+                        SizedBox(
+                          height: responsive.dp(3),
+                        ),
+                        Text(
+                          "Inscreva-se para começar",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: responsive.dp(2),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Positioned(
+                    top: sizeRedCircle * 1.2,
+                    left: sizeRedCircle * 0.1,
+                    child: RegisterForm(),
+                  ),
+                  Positioned(
+                    left: 15,
+                    top: 10,
+                    child: SafeArea(
+                      child: CupertinoButton(
+                        color: Colors.black26,
+                        padding: EdgeInsets.all(10),
+                        borderRadius: BorderRadius.circular(30),
+                        onPressed: () {},
+                        child: Icon(Icons.arrow_back),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
