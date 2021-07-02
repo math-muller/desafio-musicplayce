@@ -1,5 +1,6 @@
-import 'package:desafio_musicplayce/app/data/usecases/usecases.dart';
 import 'package:get/get.dart';
+
+import '../../usecases/usecases.dart';
 
 class AuthenticationRepository {
   final RemoteAuthentication _remote = Get.find<RemoteAuthentication>();

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -74,12 +73,9 @@ class RegisterPage extends StatelessWidget with KeyboardManager {
                     left: 15,
                     top: 10,
                     child: SafeArea(
-                      child: CupertinoButton(
-                        color: Colors.black26,
-                        padding: EdgeInsets.all(10),
-                        borderRadius: BorderRadius.circular(30),
+                      child: ReturnButton(
                         onPressed: _.goBack,
-                        child: Icon(Icons.arrow_back),
+                        color: Colors.black26,
                       ),
                     ),
                   ),

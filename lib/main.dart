@@ -1,10 +1,10 @@
+import 'package:desafio_musicplayce/app/modules/home/home.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../app/routes/routes.dart';
 
-import 'app/modules/login/login.dart';
 import 'app/theme/theme.dart';
 
 void main() {
@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
           return GetMaterialApp(
             title: 'Flutter Demo',
             theme: makeAppTheme(),
-            home: LoginPage(),
-            initialBinding: LoginBinding(),
+            home: HomePage(),
+            initialBinding: HomeBinding(),
             debugShowCheckedModeBanner: false,
             getPages: AppPages.pages,
           );

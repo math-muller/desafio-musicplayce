@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
 
+import '../modules/movie_details/movie_details.dart';
+import '../modules/register/register.dart';
 import '../modules/home/home.dart';
 import '../modules/login/login.dart';
-import '../modules/register/register.dart';
 
 import '../routes/routes.dart';
 
@@ -22,6 +23,10 @@ class AppPages {
       name: AppRoutes.REGISTER,
       page: () => RegisterPage(),
       binding: RegisterBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.MOVIEDETAILS,
+      page: () => MovieDetailsPage(),
     ),
   ];
 }
