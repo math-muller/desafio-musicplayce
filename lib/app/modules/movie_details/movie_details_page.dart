@@ -17,7 +17,6 @@ class MovieDetailsPage extends StatelessWidget {
     final movie = Get.arguments;
 
     return Scaffold(
-      backgroundColor: Colors.black,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
@@ -31,7 +30,7 @@ class MovieDetailsPage extends StatelessWidget {
                       height: responsive.dp(42),
                       width: responsive.width,
                     ),
-                    SizedBox(height: responsive.dp(2.4)),
+                    SizedBox(height: responsive.dp(1.1)),
                     MovieTitleContainer(
                       height: responsive.dp(7),
                       width: responsive.width,
@@ -39,7 +38,7 @@ class MovieDetailsPage extends StatelessWidget {
                       title: movie['titulo'],
                     ),
                     Divider(
-                      color: Colors.white,
+                      color: Colors.grey.shade600,
                       endIndent: 16,
                       indent: 16,
                     ),

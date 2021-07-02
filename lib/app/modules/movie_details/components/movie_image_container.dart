@@ -17,7 +17,13 @@ class MovieImageContainer extends StatelessWidget {
     return Container(
       height: this.height,
       width: this.width,
-      color: Colors.black,
+      decoration: BoxDecoration(color: Colors.black, boxShadow: [
+        BoxShadow(
+          spreadRadius: 1,
+          blurRadius: 20,
+          offset: Offset(0, 2),
+        ),
+      ]),
       child: Image.network(this.imagePath),
     );
   }

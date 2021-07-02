@@ -58,7 +58,7 @@ class LoginController extends GetxController {
       spinnerDialog.showLoading();
       await _repository.auth(email: _email, password: _password);
       spinnerDialog.hideLoading();
-      await Get.toNamed(AppRoutes.HOME);
+      await Get.offNamed(AppRoutes.HOME);
     } catch (error) {
       spinnerDialog.hideLoading();
       showMessage(

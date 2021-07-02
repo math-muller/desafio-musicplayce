@@ -3,7 +3,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
 
 import '../../data/repositories/repositories.dart';
-
 import '../../routes/routes.dart';
 
 class HomeController extends GetxController {

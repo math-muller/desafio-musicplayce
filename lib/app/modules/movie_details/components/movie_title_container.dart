@@ -17,14 +17,14 @@ class MovieTitleContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 20),
+      alignment: Alignment.center,
       width: this.width,
       height: this.height,
-      color: Colors.black,
+      color: Colors.grey.shade200,
       child: Text(
         this.title,
         style: TextStyle(
-          color: Colors.white,
+          color: Colors.grey.shade900,
           fontSize: this.fontSize,
         ),
       ),

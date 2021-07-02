@@ -1,7 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:desafio_musicplayce/app/modules/home/components/components.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'components/components.dart';
+import '../../utils/utils.dart';
 
 import 'home.dart';
 
@@ -10,18 +13,16 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Responsive responsive = Responsive.of(context);
+
     return Scaffold(
+      appBar: CustomAppBar(),
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Text('Filmes'),
-        centerTitle: true,
-        backgroundColor: Colors.red.shade900,
-      ),
       body: GetBuilder<HomeController>(
         builder: (_) => SafeArea(
           child: Container(
-            width: double.infinity,
-            height: double.infinity,
+            width: responsive.width,
+            height: responsive.height,
             child: StreamBuilder<QuerySnapshot>(
               stream: _.load(),
               builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
@@ -32,9 +33,7 @@ class HomePage extends StatelessWidget {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return Center(
                     child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation(
-                        Colors.red.shade900,
-                      ),
+                      valueColor: AlwaysStoppedAnimation(Colors.red.shade900),
                     ),
                   );
                 }

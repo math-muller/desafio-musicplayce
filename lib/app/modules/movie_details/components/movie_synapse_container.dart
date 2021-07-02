@@ -12,11 +12,12 @@ class MovieSynapseContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.all(20.0),
       child: Text(
         this.text,
-        style: TextStyle(color: Colors.white, fontSize: this.fontSize),
+        style: TextStyle(color: Colors.grey.shade900, fontSize: this.fontSize),
         textAlign: TextAlign.start,
       ),
     );
