@@ -58,7 +58,7 @@ class LoginController extends GetxController {
       spinnerDialog.showLoading();
       await _repository.auth(email: _email, password: _password);
       spinnerDialog.hideLoading();
-      Get.toNamed(AppRoutes.HOME);
+      await Get.toNamed(AppRoutes.HOME);
     } catch (error) {
       spinnerDialog.hideLoading();
       showMessage(
@@ -68,7 +68,7 @@ class LoginController extends GetxController {
     }
   }
 
-  void goToRegister() {
-    Get.toNamed(AppRoutes.REGISTER);
+  Future<void> goToRegister() async {
+    await Get.toNamed(AppRoutes.REGISTER);
   }
 }

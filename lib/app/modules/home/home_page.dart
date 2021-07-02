@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:desafio_musicplayce/app/modules/home/components/components.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,7 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Filmes'),
         centerTitle: true,
@@ -40,19 +41,10 @@ class HomePage extends StatelessWidget {
                 return ListView(
                   children: snapshot.data!.docs.map((DocumentSnapshot d) {
                     final data = d.data() as Map<String, dynamic>;
-                    return Column(
-                      children: [
-                        Divider(color: Colors.white),
-                        ListTile(
-                          title: Text(
-                            data['titulo'],
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          leading: Image.network(data['thumb']),
-                          onTap: () => _.goToMovieDetails(data),
-                        ),
-                        SizedBox(height: 10),
-                      ],
+                    return MovieItem(
+                      title: data['titulo'],
+                      imagePath: data['thumb'],
+                      onTap: () => _.goToMovieDetails(data),
                     );
                   }).toList(),
                 );

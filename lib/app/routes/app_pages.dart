@@ -13,16 +13,19 @@ class AppPages {
       name: AppRoutes.HOME,
       page: () => HomePage(),
       binding: HomeBinding(),
+      transition: Transition.fadeIn,
     ),
     GetPage(
       name: AppRoutes.LOGIN,
       page: () => LoginPage(),
       binding: LoginBinding(),
+      transition: Transition.fadeIn,
     ),
     GetPage(
       name: AppRoutes.REGISTER,
       page: () => RegisterPage(),
       binding: RegisterBinding(),
+      transition: Transition.fadeIn,
     ),
     GetPage(
       name: AppRoutes.MOVIEDETAILS,

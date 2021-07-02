@@ -49,7 +49,7 @@ class RegisterPage extends StatelessWidget with KeyboardManager {
                     left: sizeRedCircle * 0.12,
                     child: Column(
                       children: <Widget>[
-                        Icon(Icons.login_rounded, size: 45),
+                        Icon(Icons.create_new_folder_rounded, size: 45),
                         SizedBox(
                           height: responsive.dp(3),
                         ),

@@ -50,7 +50,7 @@ class LoginPage extends StatelessWidget with KeyboardManager {
                     left: sizeRedCircle * 0.12,
                     child: Column(
                       children: <Widget>[
-                        Icon(Icons.verified, size: 50),
+                        Icon(Icons.accessibility_new_rounded, size: 50),
                         SizedBox(
                           height: responsive.dp(3),
                         ),
