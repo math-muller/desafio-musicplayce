@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../../utils/utils.dart';
 
 import '../../../shared/shared.dart';
+import '../../../helpers/helpers.dart';
 
 import '../login.dart';
 
@@ -22,14 +23,14 @@ class LoginForm extends StatelessWidget {
         child: Column(
           children: [
             InputText(
-              label: 'Email',
+              label: R.string.email,
               keyboardType: TextInputType.emailAddress,
               obscureText: false,
               validator: controller.validateEmail,
             ),
             SizedBox(height: responsive.dp(2.2)),
             InputText(
-              label: 'Senha',
+              label: R.string.password,
               keyboardType: TextInputType.text,
               obscureText: true,
               validator: controller.validatePassword,
@@ -40,7 +41,7 @@ class LoginForm extends StatelessWidget {
               height: responsive.dp(5.5),
               child: ElevatedButton(
                 onPressed: controller.validateForm,
-                child: Text('Entrar'),
+                child: Text(R.string.enterButton),
               ),
             ),
             SizedBox(height: responsive.dp(1)),
@@ -48,13 +49,13 @@ class LoginForm extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Novo por aqui?',
+                  R.string.newAroundHere,
                   style: TextStyle(fontWeight: FontWeight.w500),
                 ),
                 TextButton(
                   onPressed: controller.goToRegister,
                   child: Text(
-                    'Cadastre-se',
+                    R.string.register,
                     style: TextStyle(color: Colors.red.shade900),
                   ),
                 ),

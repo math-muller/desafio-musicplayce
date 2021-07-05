@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MovieSynapseContainer extends StatelessWidget {
+class MovieSynopsisContainer extends StatelessWidget {
   final String text;
   final double fontSize;
 
-  const MovieSynapseContainer({
+  const MovieSynopsisContainer({
     Key? key,
     required this.text,
     required this.fontSize,

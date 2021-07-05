@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import '../../shared/shared.dart';
 import '../../utils/utils.dart';
 
+import '../../helpers/helpers.dart';
+
 import 'components/components.dart';
 
 import 'register.dart';
@@ -49,12 +51,12 @@ class RegisterPage extends StatelessWidget with KeyboardManager {
                     left: sizeRedCircle * 0.12,
                     child: Column(
                       children: <Widget>[
-                        Icon(Icons.create_new_folder_rounded, size: 45),
+                        Icon(Icons.video_label, size: 45),
                         SizedBox(
                           height: responsive.dp(3),
                         ),
                         Text(
-                          "Inscreva-se para começar",
+                          R.string.signupToStart,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: responsive.dp(2),

@@ -5,6 +5,8 @@ import '../../utils/utils.dart';
 
 import '../../shared/shared.dart';
 
+import '../../helpers/helpers.dart';
+
 import 'components/components.dart';
 
 import 'login.dart';
@@ -50,12 +52,12 @@ class LoginPage extends StatelessWidget with KeyboardManager {
                     left: sizeRedCircle * 0.12,
                     child: Column(
                       children: <Widget>[
-                        Icon(Icons.accessibility_new_rounded, size: 50),
+                        Icon(Icons.video_library_sharp, size: 50),
                         SizedBox(
                           height: responsive.dp(3),
                         ),
                         Text(
-                          "Olá\nBem vindo de volta!",
+                          R.string.welcomeBack,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: responsive.dp(2),

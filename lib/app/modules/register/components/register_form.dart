@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 
 import '../../../shared/shared.dart';
 
+import '../../../helpers/helpers.dart';
+
 import '../../../utils/utils.dart';
 import '../register.dart';
 
@@ -21,21 +23,21 @@ class RegisterForm extends StatelessWidget {
         child: Column(
           children: [
             InputText(
-              label: 'Nome',
+              label: R.string.name,
               keyboardType: TextInputType.emailAddress,
               obscureText: false,
               validator: controller.validateName,
             ),
             SizedBox(height: responsive.dp(2.2)),
             InputText(
-              label: 'Email',
+              label: R.string.email,
               keyboardType: TextInputType.emailAddress,
               obscureText: false,
               validator: controller.validateEmail,
             ),
             SizedBox(height: responsive.dp(2.2)),
             InputText(
-              label: 'Senha',
+              label: R.string.password,
               keyboardType: TextInputType.text,
               obscureText: true,
               validator: controller.validatePassword,
@@ -46,7 +48,7 @@ class RegisterForm extends StatelessWidget {
               height: responsive.dp(5.5),
               child: ElevatedButton(
                 onPressed: controller.validateForm,
-                child: Text('Cadastrar'),
+                child: Text(R.string.registerButton),
               ),
             ),
           ],

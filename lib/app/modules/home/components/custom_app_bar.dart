@@ -1,3 +1,4 @@
+import 'package:desafio_musicplayce/app/helpers/helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,14 +20,14 @@ class CustomAppBar extends PreferredSize {
                     children: [
                       Text.rich(
                         TextSpan(
-                          text: 'Olá,\n',
+                          text: R.string.hi,
                           style: TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.w400,
                           ),
                           children: [
                             TextSpan(
-                                text: 'Aqui está sua lista de filmes!',
+                                text: R.string.hereIsYourMovieList,
                                 style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w600,

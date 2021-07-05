@@ -42,7 +42,7 @@ class MovieDetailsPage extends StatelessWidget {
                       endIndent: 16,
                       indent: 16,
                     ),
-                    MovieSynapseContainer(
+                    MovieSynopsisContainer(
                       text: movie['sinopse'],
                       fontSize: responsive.dp(2),
                     ),
