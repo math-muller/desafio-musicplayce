@@ -23,6 +23,13 @@ class MovieItem extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.grey.shade200,
             borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 5,
+                color: Colors.grey.shade500,
+                offset: Offset(0, 0),
+              ),
+            ],
           ),
           child: ListTile(
             title: Text(

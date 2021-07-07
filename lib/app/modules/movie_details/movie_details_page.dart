@@ -5,6 +5,8 @@ import '../../utils/utils.dart';
 
 import '../../shared/shared.dart';
 
+import '../../data/models/models.dart';
+
 import 'components/components.dart';
 
 class MovieDetailsPage extends StatelessWidget {
@@ -14,19 +16,20 @@ class MovieDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final Responsive responsive = Responsive.of(context);
 
-    final movie = Get.arguments;
+    final MovieModel movie = Get.arguments;
 
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
+            width: double.infinity,
             height: responsive.height,
             child: Stack(
               children: [
                 Column(
                   children: [
                     MovieImageContainer(
-                      imagePath: movie['thumb'],
+                      imagePath: movie.thumb,
                       height: responsive.dp(42),
                       width: responsive.width,
                     ),
@@ -35,15 +38,13 @@ class MovieDetailsPage extends StatelessWidget {
                       height: responsive.dp(7),
                       width: responsive.width,
                       fontSize: responsive.dp(2.8),
-                      title: movie['titulo'],
+                      title: movie.title,
                     ),
-                    Divider(
-                      color: Colors.grey.shade600,
-                      endIndent: 16,
-                      indent: 16,
+                    SizedBox(
+                      height: responsive.dp(3),
                     ),
                     MovieSynopsisContainer(
-                      text: movie['sinopse'],
+                      text: movie.synopsis,
                       fontSize: responsive.dp(2),
                     ),
                   ],

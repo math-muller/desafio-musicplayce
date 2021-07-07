@@ -1,10 +1,10 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'components/components.dart';
+import '../../data/models/models.dart';
 import '../../utils/utils.dart';
+
+import 'components/components.dart';
 
 import 'home.dart';
 
@@ -23,13 +23,13 @@ class HomePage extends StatelessWidget {
           child: Container(
             width: responsive.width,
             height: responsive.height,
-            child: StreamBuilder<QuerySnapshot>(
+            child: StreamBuilder(
               stream: _.load(),
-              builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
+              builder:
+                  (BuildContext ctx, AsyncSnapshot<List<MovieModel>> snapshot) {
                 if (snapshot.hasError) {
                   return Center(child: Text('Algo deu errado'));
                 }
-
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return Center(
                     child: CircularProgressIndicator(
@@ -37,15 +37,16 @@ class HomePage extends StatelessWidget {
                     ),
                   );
                 }
-                return ListView(
-                  children: snapshot.data!.docs.map((DocumentSnapshot d) {
-                    final data = d.data() as Map<String, dynamic>;
+                return ListView.builder(
+                  itemCount: snapshot.data!.length,
+                  itemBuilder: (BuildContext ctx, int index) {
+                    MovieModel movieModel = snapshot.data![index];
                     return MovieItem(
-                      title: data['titulo'],
-                      imagePath: data['thumb'],
-                      onTap: () => _.goToMovieDetails(data),
+                      title: movieModel.title,
+                      imagePath: movieModel.thumb,
+                      onTap: () => _.goToMovieDetails(movieModel),
                     );
-                  }).toList(),
+                  },
                 );
               },
             ),

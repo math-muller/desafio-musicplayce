@@ -17,10 +17,20 @@ class MovieTitleContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: Colors.grey.shade200,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.shade800,
+            spreadRadius: 2,
+            blurRadius: 15,
+            offset: Offset(20, 10),
+          ),
+        ],
+      ),
       alignment: Alignment.center,
       width: this.width,
       height: this.height,
-      color: Colors.grey.shade200,
       child: Text(
         this.title,
         style: TextStyle(
