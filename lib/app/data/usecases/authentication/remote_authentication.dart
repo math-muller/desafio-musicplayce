@@ -10,7 +10,7 @@ class RemoteAuthentication {
       if (error.code == 'user-not-found') {
         throw Exception('Nenhum usuário encontrado');
       } else if (error.code == 'wrong-password') {
-        throw Exception('Senha incorreta');
+        throw Exception('Credenciais inválidas');
       }
     }
   }

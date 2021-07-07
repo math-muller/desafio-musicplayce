@@ -23,7 +23,7 @@ class MovieTitleContainer extends StatelessWidget {
           BoxShadow(
             color: Colors.grey.shade800,
             spreadRadius: 2,
-            blurRadius: 15,
+            blurRadius: 10,
             offset: Offset(20, 10),
           ),
         ],
